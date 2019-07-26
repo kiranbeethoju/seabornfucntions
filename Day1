@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+from matplotlib.colors import ListedColormap 
+a=100
+c_p = sns.color_palette("muted", n_colors=10)
+cmap = ListedColormap(sns.color_palette(c_p).as_hex())
+
+d1=np.random.rand(a)
+d2=np.random.rand(a)
+colors=np.random.randint(0,10,a)
+
+plt.scatter(d1,d2,c=colors,cmap=cmap, label=True)
+plt.colorbar()
+plt.show()
